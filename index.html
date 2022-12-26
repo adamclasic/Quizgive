@@ -19,22 +19,22 @@
                 <div class="cssProgress">
                     <div class="progress2">
                         <div class="cssProgress-bar cssProgress-success cssProgress-stripes" data-percent="40"
-                            style="width: 40%; transition: none 0s ease 0s;"> <span class="cssProgress-label">6 of
-                                15</span> </div>
+                            style="width: 40%; transition: none 0s ease 0s;"> <span class="cssProgress-label"><span id="pb-cur-q"> 6 </span> of
+                            <span id="pb-total-q"> 6 </span></span> </div>
                     </div>
                 </div>
             </div>
 
             <div class="qz-question-block">
                 <div class="qz-question-container">
-                    <div class="qz-question"> <label><span class="no">6</span>What is the name of this place?</label>
+                    <div class="qz-question"> <label id='q-text'><span class="no">6</span >What is the name of this place?</label>
                         <div class="qz-question-content">
-                            <p><img class="alignnone size-large wp-image-1715 lazyloaded"
-                                    src="https://www.quizexpo.com/wp-content/uploads/2020/05/17018426-1024x591.jpg"
-                                    alt="What is the name of this place? 5" width="850" height="491"
-                                    data-ll-status="loaded"><noscript><img class="alignnone size-large wp-image-1715"
-                                        src="https://www.quizexpo.com/wp-content/uploads/2020/05/17018426-1024x591.jpg"
-                                        alt="What is the name of this place? 5" width="850" height="491"></noscript></p>
+                            <p><img
+                                id="q-image"
+                                src=""
+                                alt="quiz image" width="850" height="491"
+                                >
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -43,15 +43,17 @@
                     <form method="post" name="qz-form" id="qz-form" action="">
                         <div class="qz-option">
                             <ul class="quiz-answer-list qz_answer_box_max">
-                                <li class="quiz_answer not-selected-li"> <span class="quiz_answer-inner">
+                                <li data-answer-id="A" class="quiz_answer not-selected-li">
+                                    <span class="quiz_answer-inner">
                                 
                                         <span class="quiz_answer-inner-label"><span class="textFitted  textFitAlignVert"
                                                 style="display: inline-block; font-size: 26px; height: 47px;">
                                                 <p>A</p>
-                                            </span></span>
+                                            </span>
+                                        </span>
                                     </span>
                                 </li>
-                                <li class="quiz_answer not-selected-li"> <span class="quiz_answer-inner">
+                                <li data-answer-id="B" class="quiz_answer not-selected-li"> <span class="quiz_answer-inner">
                                 
                                         <span class="quiz_answer-inner-label"><span class="textFitted  textFitAlignVert"
                                                 style="display: inline-block; font-size: 26px; height: 47px;">
