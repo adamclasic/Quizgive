@@ -1,1 +1,1 @@
-This is a reusable quiz script. No need to change the html, you will change the array (DATA) in the Javascript file and everything will dynamically update.
+This is a reusable quiz script. No need to change the HTML, you will change the array (DATA) in the Javascript file and everything will be automagically updated :-D, including the number of questions and answers.

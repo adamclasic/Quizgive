@@ -160,6 +160,8 @@ if (sessionStorage.getItem('count')==null) {count = 0};
 document.addEventListener(
   "DOMContentLoaded",
   function () {
+    let mainFrame = document.querySelector('#frame')
+    let resultFrame = document.querySelector('#result-frame')
     document.querySelector("#q-text").innerText = DATA[count].question
     document.querySelector("#q-image").src = DATA[count].imageUrl
     document.querySelector(".quiz-answer-list").innerHTML = DATA[count].answers.map(a=>{
@@ -205,8 +207,8 @@ document.addEventListener(
         } else {
           sessionStorage.setItem("quizdata", JSON.stringify(qzData));
           findMostComun(qzData)
-          window.location = ('/results.html?answer='+findMostComun(qzData))
-
+          mainFrame.style.display = 'none';
+          resultFrame.style.display = 'block';
           console.log('done');
         }
       } else {
@@ -214,6 +216,26 @@ document.addEventListener(
       }
     });
 
+    // Results code
+
+    let answer = findMostComun(qzData);
+    let resultCont = document.querySelector('.result-cont')
+    if (answer === 'A') { // Edit here to change result of the quiz.
+      resultCont.innerHTML = `<p>You are a Carnivor!</p>`
+    } else {
+      resultCont.innerHTML = `<p>You are a Vegan! ^^</p>`
+    }
+    let mailInput = document.querySelector('#input-email')
+    let mailBtn = document.querySelector('#email-btn').addEventListener('click',(e)=>{
+      e.preventDefault()
+      console.log(mailInput.value, 'to be stored');
+      resultCont.style.display = 'block'
+    })
+    let skipBtn = document.querySelector('.secondary-btn').addEventListener('click',(e)=>{
+      console.log(resultCont.style.display);
+      resultCont.style.display = 'block'
+      
+    })
   },
   false
 );
