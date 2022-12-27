@@ -3,7 +3,7 @@ const DATA = [
     question: "Do you know this place?",
     imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/17018426-1024x591.jpg",
     answers: [
-      { id: "A", value: "A" },
+      { id: "A", value: "A" }, // Value will be the text user sees in the questions, ID will used to test the final result 
       { id: "B", value: "B" },
       { id: "C", value: "C" },
       { id: "D", value: "D" },
@@ -21,6 +21,116 @@ const DATA = [
   },
   {
     question: "What is this cool?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
     imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
     answers: [
       { id: "A", value: "A" },
@@ -122,6 +232,5 @@ function findMostComun(arr) {
     }
     m = 0;
   }
-  console.log(`${item} ( ${mf} times ) `);
   return item;
 }

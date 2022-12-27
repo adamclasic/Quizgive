@@ -7,7 +7,11 @@ document.addEventListener(
     let answer = params.answer;
 
     let resultCont = document.querySelector('.result-cont')
-    resultCont.innerHTML = `<p>You're most answered answer is : ${answer}</p>`
+    if (answer === 'A') { // Edit here to change result of the quiz.
+      resultCont.innerHTML = `<p>You are a Carnivor!</p>`
+    } else {
+      resultCont.innerHTML = `<p>You are a Vegan! ^^</p>`
+    }
     let mailBtn = document.querySelector('#email-btn').addEventListener('click',(e)=>{
       resultCont.style.display = 'block'
       e.preventDefault()
