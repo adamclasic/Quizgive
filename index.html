@@ -7,11 +7,718 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Quiz</title>
-    <link type="text/css" rel="stylesheet" href="styles/style.css">
-    <link type="text/css" rel="stylesheet" href="styles/progressbar.css">
-    <script src="scripts/app.js"></script>
 </head>
+<script>
 
+const DATA = [
+  {
+    question: "Do you know this place?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/17018426-1024x591.jpg",
+    answers: [
+      { id: "A", value: "A" }, // Value will be the text user sees in the questions, ID will used to test the final result 
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "What is this place?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "What is this cool?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  },
+  {
+    question: "how is this ?",
+    imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/maxresdsafafefault-1024x592.jpg",
+    answers: [
+      { id: "A", value: "A" },
+      { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
+    ],
+  }
+];
+
+let qzData = JSON.parse(sessionStorage.getItem("quizdata"));
+
+let count = parseInt(sessionStorage.getItem('count'));
+if (sessionStorage.getItem('quizdata')==null) {qzData = []};
+if (sessionStorage.getItem('count')==null) {count = 0};
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    let mainFrame = document.querySelector('#frame')
+    let resultFrame = document.querySelector('#result-frame')
+    document.querySelector("#q-text").innerText = DATA[count].question
+    document.querySelector("#q-image").src = DATA[count].imageUrl
+    document.querySelector(".quiz-answer-list").innerHTML = DATA[count].answers.map(a=>{
+      return `<li data-answer-id="${a.id}" class="quiz_answer not-selected-li"> <span class="quiz_answer-inner">
+                                
+                  <span class="quiz_answer-inner-label"><span class="textFitted  textFitAlignVert"
+                          style="display: inline-block; font-size: 26px; height: 47px;">
+                          <p>${a.value}</p>
+                      </span></span>
+              </span>
+            </li>`
+    }).join('')
+
+    // progressbar 
+    document.querySelector(".cssProgress-bar").style.width = `${((count+1)*100)/DATA.length}%`
+    document.querySelector("#pb-cur-q").innerText = count+1
+    document.querySelector("#pb-total-q").innerText = DATA.length
+
+    // answering logic
+    let answersArr = document.querySelectorAll(".quiz_answer");
+    answersArr.forEach((answer) => {
+      answer.addEventListener("click", (e) => {
+        answersArr.forEach((answer) => {
+          answer.classList.remove("selected-li")
+        })
+        answer.classList.add("selected-li")
+      });
+    });
+
+    // form handling
+    let form = document.querySelector("#qz-form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault()
+      let selectedAnswer = form.querySelector('.selected-li')
+      if (selectedAnswer) {
+        qzData.push(selectedAnswer.dataset.answerId)
+        sessionStorage.setItem("quizdata", JSON.stringify(qzData));
+        if (count<DATA.length-1) {
+          sessionStorage.setItem("count", ++count);
+          
+          // e.currentTarget.submit()
+          window.location.reload()
+        } else {
+          sessionStorage.setItem("quizdata", JSON.stringify(qzData));
+          findMostComun(qzData)
+          mainFrame.style.display = 'none';
+          resultFrame.style.display = 'block';
+          console.log('done');
+        }
+      } else {
+        alert('please select an answer')
+      }
+    });
+
+    // Results code
+
+    let answer = findMostComun(qzData);
+    let resultCont = document.querySelector('.result-cont')
+    if (answer === 'A') { // Edit here to change result of the quiz.
+      resultCont.innerHTML = `<p>You are a Carnivor!</p>`
+    } else {
+      resultCont.innerHTML = `<p>You are a Vegan! ^^</p>`
+    }
+    let mailInput = document.querySelector('#input-email')
+    let mailBtn = document.querySelector('#email-btn').addEventListener('click',(e)=>{
+      e.preventDefault()
+      console.log(mailInput.value, 'to be stored');
+      resultCont.style.display = 'block'
+    })
+    let skipBtn = document.querySelector('.secondary-btn').addEventListener('click',(e)=>{
+      console.log(resultCont.style.display);
+      resultCont.style.display = 'block'
+      
+    })
+  },
+  false
+);
+
+function findMostComun(arr) {
+  let mf = 1;
+  let m = 0;
+  let item;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      if (arr[i] == arr[j]) m++;
+      if (mf < m) {
+        mf = m;
+        item = arr[i];
+      }
+    }
+    m = 0;
+  }
+  return item;
+}
+    </script>
+    <style>
+
+:root {
+  --color-base-background-1: rgb(123, 44, 226);
+  --color-base-accent-2: rgba(51, 170, 251, 1);
+  --background-color: #7b2ce2;
+  --gradient-base-background-1: linear-gradient(113deg, rgba(51, 170, 251, 1), rgba(127, 72, 176, 1) 68%);
+  --gradient-base-background-3: linear-gradient(180deg, #00f0ff, rgb(29, 75, 118) 78%);
+  --gradient-base-accent-1: #ffffff;
+  --gradient-base-accent-2: #00f0ff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  list-style: none;
+  border: 0 none;
+}
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--gradient-base-background-1);
+  color: #fff;
+}
+
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  color: #222;
+  font-weight: 400;
+  line-height: 19px;
+  font-style: normal;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-size: 16px;
+  line-height: 16px;
+  background: var(--gradient-base-background-1);
+  min-height: 100vh;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  border-style: none;
+  vertical-align: top;
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+#frame {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.qz-question-block {
+  border-top: 1px solid rgba(188, 188, 188, 0.682);
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.qz-question {
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 1px 1px #000000d6;
+}
+
+.qz-question label {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+  display: block;
+  font-weight: 700;
+  padding-left: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.qz-question label .no {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: inline-block;
+  background: #fff;
+  line-height: 40px;
+  text-align: center;
+  border: 3px solid #e1e1e1;
+  color: #686266;
+  font-weight: 400;
+  margin-right: 10px;
+  font-size: 1.2em;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: none;
+}
+
+.qz-question-content p {
+  margin-top: 15px;
+}
+
+.qz-question-content {
+  max-width: 728px;
+  margin: auto;
+  text-align: center;
+}
+
+.qz-question-content img {
+  max-width: 100%;
+}
+
+.qz-btn-general {
+  border: 1px solid var(--color-base-accent-2);
+  margin: 0 10px 2px 0;
+  outline: none;
+  position: relative;
+  text-decoration: none;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 2px;
+  transition: all 200ms cubic-bezier(0, 0, .58, 1) 0s;
+  background: var(--gradient-base-background-3);
+  color: #ffffff!important;
+  display: block!important;
+  width: 50%!important;
+  font-size: 20px!important;
+  padding: 17px 30px!important;
+  margin: auto;
+}
+
+.qz-option p {
+  margin-bottom: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.qz-option {
+  display: block;
+  width: 60%;
+  margin: 5px auto;
+  flex: 1;
+
+}
+
+.qz-options input[type="submit"] {
+  margin-top: 20px;
+}
+
+.qz-ads-container-bottom {
+  max-width: 728px;
+  width: 100%;
+  margin: 7px auto;
+  clear: both;
+}
+
+.qz-ads-container-bottom {
+  margin-top: 15px;
+  clear: both;
+}
+
+.qz-btn-center {
+  display: table!important;
+  margin: 0 auto;
+}
+
+.quiz-answer-list {
+
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: .25rem;
+  padding-left: 0;
+  list-style: none;
+  justify-content: center
+}
+
+.quiz-answer-list .quiz_answer {
+  margin: .25rem!important;
+  width: calc(50% - .5rem)!important;
+  font-size: 16px;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+}
+
+.quiz-answer-list .quiz_answer::before {
+  content: "";
+  display: block;
+  padding-top: 71%;
+  background-color: #f9f9f9;
+  border: 1px solid #c0c2be;
+}
+
+.quiz_answer-inner {
+  position: absolute;
+  display: block;
+  border-radius: 0;
+  font-weight: 700;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.quiz_answer-inner-label {
+  line-height: 1.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: .75rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.not-selected-li {
+  opacity: .5;
+}
+
+.selected-li {
+  opacity: 1!important;
+}
+
+.selected-li::before {
+  background-color: #62b6ea!important;
+  border: 1px solid #1f5f88!important;
+  box-shadow: 0 0 50px 5px #083e7736 inset;
+}
+
+.quiz_answer {
+  border-color: #c0c2be;
+  cursor: pointer;
+}
+
+.selected-li .quiz_answer-inner-label {
+  color: #fff;
+}
+
+.textFitAlignVert {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.qz-options {
+  display: block;
+  counter-reset: a;
+}
+
+.quiz_answer {
+  border-color: #c0c2be;
+  cursor: pointer;
+}
+
+.qz_answer_box_max li {
+  width: 100%;
+  max-width: 100%!important;
+}
+@media (max-width:991px) {
+  .qz-question label .no {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    background: #fff;
+    line-height: 30px;
+    text-align: center;
+    border: 3px solid #e1e1e1;
+    color: #686266;
+    font-weight: 400;
+    margin-right: 10px;
+    font-size: .9em;
+    display: none;
+  }
+
+  .qz-question-content {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .qz-question label {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    line-height: 1.3em;
+    padding: 0 15px;
+    text-align: left;
+  }
+
+  .qz-question-content img {
+    max-width: 95%;
+    width: 95% !important;
+  }
+
+  #input-email {
+
+    width: 90% !important;
+
+  }
+
+  .qz-btn-general {
+    width: 90% !important;
+  }
+
+  .qz-option {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .quiz-answer-list {
+    padding: 15px;
+  }
+
+  .qz-option {
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+  }
+}
+
+@media (max-width:400px) {
+  .quiz-answer-list .quiz_answer {
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+#input-email {
+  display: table!important;
+  margin: 26px auto;
+  height: 50px;
+  padding: 5px;
+  font-size: 18px;
+  width: 50%;
+
+}
+.secondary-btn {
+background-color: #fff0;
+margin: 26px;
+font-size: 16px;
+color: #fff;
+cursor: pointer;
+text-decoration: underline;
+}
+
+.result-cont {
+  padding: 16px; 
+  margin: auto;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+
+.cssProgress {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.cssProgress .progress2 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.cssProgress .cssProgress-bar {
+    display: block;
+    float: left;
+    width: 0%;
+    height: 100%;
+    background: #3798d9;
+    box-shadow: inset 0 -1px 2px rgba(0, 0, 0, .1);
+    -webkit-transition: width 0.8s ease-in-out;
+    transition: width 0.8s ease-in-out;
+}
+
+.cssProgress .cssProgress-label {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 1px 1px #000000d6;
+}
+
+.cssProgress .cssProgress-success {
+    background-color: #a766bb!important;
+}
+
+.cssProgress .cssProgress-stripes {
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .125) 50%, rgba(255, 255, 255, .125) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, .125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .125) 50%, rgba(255, 255, 255, .125) 75%, transparent 75%, transparent);
+    background-size: 35px 35px;
+}
+
+.progress2 {
+    background-color: #bfcbd4;
+    border-radius: 13px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+.progress2 .cssProgress-bar {
+    height: 26px;
+    border-radius: 13px;
+}
+
+.progress2 .cssProgress-label {
+    line-height: 26px;
+}
+
+.cssProgress {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    margin-top: 15px;
+}
+
+    </style>
 <body>
     <div id="frame">
         <div class="progress-cont">
