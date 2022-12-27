@@ -77,6 +77,8 @@ form {
 
 .qz-question {
   margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 1px 1px #000000d6;
 }
 
 .qz-question label {
