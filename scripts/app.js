@@ -94,7 +94,8 @@ document.addEventListener(
           window.location.reload()
         } else {
           sessionStorage.setItem("quizdata", JSON.stringify(qzData));
-          // window.location = ('/asdf')
+          findMostComun(qzData)
+          window.location = ('/results.html?answer='+findMostComun(qzData))
 
           console.log('done');
         }
@@ -106,3 +107,21 @@ document.addEventListener(
   },
   false
 );
+
+function findMostComun(arr) {
+  let mf = 1;
+  let m = 0;
+  let item;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      if (arr[i] == arr[j]) m++;
+      if (mf < m) {
+        mf = m;
+        item = arr[i];
+      }
+    }
+    m = 0;
+  }
+  console.log(`${item} ( ${mf} times ) `);
+  return item;
+}

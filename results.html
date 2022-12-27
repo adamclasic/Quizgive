@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Quiz</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <script src="scripts/results.js"></script>
+</head>
+
+<body>
+    <div id="frame">
+
+        <div class="qz-question-block">
+            <div class="qz-question-container">
+                <div class="qz-question"> 
+                    
+                    <div class="qz-question-content">
+                        <p><img
+                            id="q-image"
+                            src="https://www.quizexpo.com/wp-content/uploads/2020/05/17018426-1024x591.jpg"
+                            alt="quiz image" width="850" height="491"
+                            >
+                        </p>
+                    </div>
+                    <label id='q-text' style="margin-top: 16px;">
+                        <span class="no">6</span >Get amazing quizes like these right to your box!
+                    </label>
+                </div>
+            </div>
+
+            <div class="qz-options" style="
+            display: flex;
+            flex-direction: column;">
+                <form method="get" name="qz-form" id="qz-form" action="">
+                    <input class="" id="input-email" type="email" name="email" placeholder="Email" />
+                     <input id="email-btn" type="submit"
+                        class="qz-btn-general qz-btn-center btn-gen-mob" value="Submit And See Results">
+                    </form>
+                    <button class="secondary-btn ">See Results</button>
+            </div>
+            <div class="result-cont qz-question" style="display: none;">
+                you're A
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
