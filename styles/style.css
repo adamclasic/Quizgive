@@ -4,7 +4,7 @@
   --color-base-accent-2: rgba(51, 170, 251, 1);
   --background-color: #7b2ce2;
   --gradient-base-background-1: linear-gradient(113deg, rgba(51, 170, 251, 1), rgba(127, 72, 176, 1) 68%);
-  --gradient-base-background-2: #f3f3f3;
+  --gradient-base-background-3: linear-gradient(180deg, #00f0ff, rgb(29, 75, 118) 98%);
   --gradient-base-accent-1: #ffffff;
   --gradient-base-accent-2: #00f0ff;
 }
@@ -174,7 +174,7 @@ form {
   overflow: hidden;
   border-radius: 2px;
   transition: all 200ms cubic-bezier(0, 0, .58, 1) 0s;
-  background: var(--background-color);
+  background: var(--gradient-base-background-3);
   color: #ffffff!important;
   display: block!important;
   width: 50%!important;
