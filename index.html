@@ -215,7 +215,8 @@ document.addEventListener(
           sessionStorage.setItem("count", ++count);
           
           // e.currentTarget.submit()
-          window.location.reload()
+          window.location.hash = '#frame';
+    window.location.reload(true);
         } else {
           sessionStorage.setItem("quizdata", JSON.stringify(qzData));
           findMostComun(qzData)
@@ -331,7 +332,7 @@ img {
 #frame {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 form {
