@@ -1,3 +1,4 @@
+
 .cssProgress {
     width: 90%;
     margin-bottom: 20px;
@@ -33,7 +34,7 @@
 }
 
 .cssProgress .cssProgress-success {
-    background-color: #66bb6a!important;
+    background-color: #a766bb!important;
 }
 
 .cssProgress .cssProgress-stripes {

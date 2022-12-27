@@ -1,4 +1,13 @@
 
+:root {
+  --color-base-background-1: rgb(123, 44, 226);
+  --color-base-accent-2: rgba(51, 170, 251, 1);
+  --background-color: #7b2ce2;
+  --gradient-base-background-1: linear-gradient(113deg, rgba(51, 170, 251, 1), rgba(127, 72, 176, 1) 68%);
+  --gradient-base-background-2: #f3f3f3;
+  --gradient-base-accent-1: #ffffff;
+  --gradient-base-accent-2: #00f0ff;
+}
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +26,7 @@
 }
 
 ::selection {
-  background: #ea0253;
+  background: var(--gradient-base-background-1);
   color: #fff;
 }
 
@@ -33,6 +42,8 @@ body {
   -moz-osx-font-smoothing: auto;
   font-size: 16px;
   line-height: 16px;
+  background: var(--gradient-base-background-1);
+  min-height: 100vh;
 }
 
 img {
@@ -45,9 +56,23 @@ img {
   height: auto;
 }
 
+#frame {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .qz-question-block {
   border-top: 1px solid rgba(188, 188, 188, 0.682);
   padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .qz-question {
@@ -135,8 +160,7 @@ img {
 
 
 .qz-btn-general {
-  border: none!important;
-  border-bottom: 5px solid #b70025!important;
+  border: 1px solid var(--color-base-accent-2);
   margin: 0 10px 2px 0;
   outline: none;
   position: relative;
@@ -146,16 +170,9 @@ img {
   line-height: 100%;
   text-align: center;
   overflow: hidden;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
-  -o-transition: all 200ms cubic-bezier(0, 0, .58, 1) 0s;
-  -moz-transition: all 200ms cubic-bezier(0, 0, .58, 1) 0s;
-  -khtml-transition: all 200ms cubic-bezier(0, 0, .58, 1) 0s;
-  -webkit-transition: all 200ms cubic-bezier(0, 0, .58, 1) 0s;
-  -ms-transition: all 200mss cubic-bezier(0, 0, .58, 1) 0s;
   transition: all 200ms cubic-bezier(0, 0, .58, 1) 0s;
-  background: #f51240!important;
+  background: var(--background-color);
   color: #ffffff!important;
   display: block!important;
   width: 50%!important;
@@ -174,6 +191,8 @@ img {
   display: block;
   width: 60%;
   margin: 5px auto;
+  flex: 1;
+
 }
 
 .qz-options input[type="submit"] {

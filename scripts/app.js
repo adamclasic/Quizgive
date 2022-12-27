@@ -5,6 +5,8 @@ const DATA = [
     answers: [
       { id: "A", value: "A" },
       { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
     ],
   },
   {
@@ -13,6 +15,8 @@ const DATA = [
     answers: [
       { id: "A", value: "A" },
       { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
     ],
   },
   {
@@ -21,6 +25,8 @@ const DATA = [
     answers: [
       { id: "A", value: "A" },
       { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
     ],
   },
   {
@@ -29,6 +35,8 @@ const DATA = [
     answers: [
       { id: "A", value: "A" },
       { id: "B", value: "B" },
+      { id: "C", value: "C" },
+      { id: "D", value: "D" },
     ],
   }
 ];
@@ -56,10 +64,10 @@ document.addEventListener(
     }).join('')
 
     // progressbar 
-    document.querySelector(".cssProgress-bar").style.width = `${(count*100)/DATA.length}%`
-    document.querySelector("#pb-cur-q").innerText = count
+    document.querySelector(".cssProgress-bar").style.width = `${((count+1)*100)/DATA.length}%`
+    document.querySelector("#pb-cur-q").innerText = count+1
     document.querySelector("#pb-total-q").innerText = DATA.length
-    
+
     // answering logic
     let answersArr = document.querySelectorAll(".quiz_answer");
     answersArr.forEach((answer) => {

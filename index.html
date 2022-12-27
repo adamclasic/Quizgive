@@ -13,60 +13,57 @@
 </head>
 
 <body>
-    <div class="form-group rsform-block rsform-block-framecontent">
-        <div id="frame" role="content">
-            <div class="progress-cont">
-                <div class="cssProgress">
-                    <div class="progress2">
-                        <div class="cssProgress-bar cssProgress-success cssProgress-stripes" data-percent="40"
-                            style="width: 40%; transition: none 0s ease 0s;"> <span class="cssProgress-label"><span id="pb-cur-q"> 6 </span> of
-                            <span id="pb-total-q"> 6 </span></span> </div>
+    <div id="frame">
+        <div class="progress-cont">
+            <div class="cssProgress">
+                <div class="progress2">
+                    <div class="cssProgress-bar cssProgress-success cssProgress-stripes" data-percent="40"
+                        style="width: 40%; transition: none 0s ease 0s;"> <span class="cssProgress-label"><span id="pb-cur-q"> 6 </span> of
+                        <span id="pb-total-q"> 6 </span></span> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qz-question-block">
+            <div class="qz-question-container">
+                <div class="qz-question"> <label id='q-text'><span class="no">6</span >What is the name of this place?</label>
+                    <div class="qz-question-content">
+                        <p><img
+                            id="q-image"
+                            src=""
+                            alt="quiz image" width="850" height="491"
+                            >
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <div class="qz-question-block">
-                <div class="qz-question-container">
-                    <div class="qz-question"> <label id='q-text'><span class="no">6</span >What is the name of this place?</label>
-                        <div class="qz-question-content">
-                            <p><img
-                                id="q-image"
-                                src=""
-                                alt="quiz image" width="850" height="491"
-                                >
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="qz-options">
-                    <form method="post" name="qz-form" id="qz-form" action="">
-                        <div class="qz-option">
-                            <ul class="quiz-answer-list qz_answer_box_max">
-                                <li data-answer-id="A" class="quiz_answer not-selected-li">
-                                    <span class="quiz_answer-inner">
-                                
-                                        <span class="quiz_answer-inner-label"><span class="textFitted  textFitAlignVert"
-                                                style="display: inline-block; font-size: 26px; height: 47px;">
-                                                <p>A</p>
-                                            </span>
+            <div class="qz-options">
+                <form method="post" name="qz-form" id="qz-form" action="">
+                    <div class="qz-option">
+                        <ul class="quiz-answer-list qz_answer_box_max">
+                            <li data-answer-id="A" class="quiz_answer not-selected-li">
+                                <span class="quiz_answer-inner">
+                            
+                                    <span class="quiz_answer-inner-label"><span class="textFitted  textFitAlignVert"
+                                            style="display: inline-block; font-size: 26px; height: 47px;">
+                                            <p>A</p>
                                         </span>
                                     </span>
-                                </li>
-                                <li data-answer-id="B" class="quiz_answer not-selected-li"> <span class="quiz_answer-inner">
-                                
-                                        <span class="quiz_answer-inner-label"><span class="textFitted  textFitAlignVert"
-                                                style="display: inline-block; font-size: 26px; height: 47px;">
-                                                <p>B</p>
-                                            </span></span>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div> <input type="hidden" name="current_q" value="1714"> <input type="submit"
-                            class="qz-btn-general qz-btn-center btn-gen-mob" value="Next">
-                    </form>
-                </div>
-
+                                </span>
+                            </li>
+                            <li data-answer-id="B" class="quiz_answer not-selected-li"> <span class="quiz_answer-inner">
+                            
+                                    <span class="quiz_answer-inner-label"><span class="textFitted  textFitAlignVert"
+                                            style="display: inline-block; font-size: 26px; height: 47px;">
+                                            <p>B</p>
+                                        </span></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>  <input type="submit"
+                        class="qz-btn-general qz-btn-center btn-gen-mob" value="Next">
+                </form>
             </div>
 </body>
 
