@@ -8,6 +8,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Quiz</title>
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.1.0/textFit.min.js"></script>
 <script>
 
 const DATA = [
@@ -15,7 +16,7 @@ const DATA = [
     question: "Do you know this place?",
     imageUrl: "https://www.quizexpo.com/wp-content/uploads/2020/05/17018426-1024x591.jpg",
     answers: [
-      { id: "A", value: "A" }, // Value will be the text user sees in the questions, ID will used to test the final result 
+      { id: "A", value: "poih poih oih ljkhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhh poih " }, // Value will be the text user sees in the questions, ID will used to test the final result 
       { id: "B", value: "B" },
       { id: "C", value: "C" },
       { id: "D", value: "D" },
@@ -172,11 +173,13 @@ if (sessionStorage.getItem('count')==null) {count = 0};
 document.addEventListener(
   "DOMContentLoaded",
   function () {
+    
     let mainFrame = document.querySelector('#frame')
     let resultFrame = document.querySelector('#result-frame')
     document.querySelector("#q-text").innerText = DATA[count].question
     document.querySelector("#q-image").src = DATA[count].imageUrl
     document.querySelector(".quiz-answer-list").innerHTML = DATA[count].answers.map(a=>{
+
       return `<li data-answer-id="${a.id}" class="quiz_answer not-selected-li"> <span class="quiz_answer-inner">
                                 
                   <span class="quiz_answer-inner-label"><span class="textFitted  textFitAlignVert"
@@ -186,6 +189,7 @@ document.addEventListener(
               </span>
             </li>`
     }).join('')
+    textFit(document.querySelectorAll('.textFitted'));
 
     // progressbar 
     document.querySelector(".cssProgress-bar").style.width = `${((count+1)*100)/DATA.length}%`
@@ -216,12 +220,13 @@ document.addEventListener(
           
           // e.currentTarget.submit()
           window.location.hash = '#frame';
-    window.location.reload(true);
+        window.location.reload(true);
         } else {
           sessionStorage.setItem("quizdata", JSON.stringify(qzData));
           findMostComun(qzData)
           mainFrame.style.display = 'none';
           resultFrame.style.display = 'block';
+          sessionStorage.clear();
           console.log('done');
         }
       } else {
@@ -233,11 +238,17 @@ document.addEventListener(
 
     let answer = findMostComun(qzData);
     let resultCont = document.querySelector('.result-cont')
+
     if (answer === 'A') { // Edit here to change result of the quiz.
       resultCont.innerHTML = `<p>You are a Carnivor!</p>`
-    } else {
+    } else if (answer === 'B') {
       resultCont.innerHTML = `<p>You are a Vegan! ^^</p>`
+    } else if (answer === 'C') {
+      resultCont.innerHTML = `<p>You are an Alien! ^^</p>`
+    } else if (answer === 'D') {
+      resultCont.innerHTML = `<p>You are a Zombie! ^^</p>`
     }
+    
     let mailInput = document.querySelector('#input-email')
     let mailBtn = document.querySelector('#email-btn').addEventListener('click',(e)=>{
       e.preventDefault()
